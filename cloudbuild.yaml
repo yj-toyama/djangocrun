@@ -1,5 +1,13 @@
 steps:
+# Build the container image
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['build', '-t', 'gcr.io/yj-pro/djangorun', '.']
+# Push the container image to Container Registry
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['push', 'gcr.io/yj-pro/djangorun']
+# Deploy container image to Cloud Run
 - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
-  entrypoint: 'bash'
-  args: ['-c', 'gcloud config set app/cloud_build_timeout 1600 && gcloud app deploy']
-timeout: '1600s'
+  entrypoint: gcloud
+  args: ['run', 'deploy', 'djangorun', '--image', 'gcr.io/yj-pro/djangorun', '--region', 'us-central1']
+images:
+- gcr.io/yj-pro/djangorun
