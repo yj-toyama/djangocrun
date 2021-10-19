@@ -26,7 +26,7 @@ SECRET_KEY = 'fjul_g3+rp%sez)^=cma0-*&$0p)r0mpx^o5wp&6l&cmbjq+n*'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['testdjango-dot-yj-pro.appspot.com','127.0.0.1','*-dot-testdjango-dot-yj-pro.appspot.com']
+ALLOWED_HOSTS = ['testdjango-dot-yj-pro.appspot.com','127.0.0.1','*-dot-testdjango-dot-yj-pro.appspot.com','djangorun-35op5mjxrq-uc.a.run.app']
 
 
 # Application definition
