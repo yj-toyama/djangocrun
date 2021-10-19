@@ -1,13 +1,13 @@
 steps:
 # Build the container image
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '-t', 'gcr.io/Cloudrundemo/djangorun', '.']
+  args: ['build', '-t', 'gcr.io/cloudrundemo-329502/djangorun', '.']
 # Push the container image to Container Registry
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['push', 'gcr.io/Cloudrundemo/djangorun']
+  args: ['push', 'gcr.io/cloudrundemo-329502/djangorun']
 # Deploy container image to Cloud Run
 - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
   entrypoint: gcloud
-  args: ['run', 'deploy', 'djangorun', '--image', 'gcr.io/Cloudrundemo/djangorun', '--region', 'us-central1']
+  args: ['run', 'deploy', 'djangorun', '--image', 'gcr.io/cloudrundemo-329502/djangorun', '--region', 'us-central1']
 images:
-- gcr.io/Cloudrundemo/djangorun
+- gcr.io/cloudrundemo-329502/djangorun
