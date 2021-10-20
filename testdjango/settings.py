@@ -28,7 +28,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['testdjango-dot-yj-pro.appspot.com','127.0.0.1','*-dot-testdjango-dot-yj-pro.appspot.com','djangorun-35op5mjxrq-uc.a.run.app']
 
-
 # Application definition
 
 INSTALLED_APPS = [
